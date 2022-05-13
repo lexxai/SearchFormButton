@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="button.css">
+  </head>
+  <body>
+    <div id="status"></div>
+	<form id="f1">
+     <div><label>MIN TIME: <input type="number" size="8" value="1" id="min_time" min="0" max="120"></label> minutes</div>
+     <div><label>MAX TIME: <input type="number" size="8" value="10" id="max_time" min="0" max="120"></label> minutes</div>
+	 <div><label>REFRESH TIME: <input type="number" size="8" value="15" id="refresh_time" min="2" max="60"></label> seconds</div>
+	 <hr>
+	  <div><label>BUTTON ID: <input type="text" size="18" value="targetbtn" id="button_id"></label>, 
+	  <label>TEXT BUTTON: <input type="checkbox" id="add_button_text" checked></label></div>
+	  <div><label>BUTTON TRIGGER: <input type="text" size="18" value="Start" id="button_trigg"></label></div>
+	  <div><label>BUTTON SEARCH BY: 
+		<select id="btnsearch" name="btnsearch">
+			<option value="id">id</option>
+			<option value="name">name</option>
+			<option value="class">class</option>
+		</select>
+	  </div>
+	 <hr>
+	 <h3>ACTIONS</h3>
+	 <div>
+	  <label>START TIME: <input type="time" size="8" value="03:00" id="s_max_time" min="00:00" max="23:59"></label> </div>
+	 <div> <label>END TIME: <input type="time" size="8" value="09:00" id="e_max_time" min="00:00" max="23:59"></label>
+	 </div>
+	 <div><label>MAX TIME BY ACTIONS: <input type="number" size="8" value="30" id="a_max_time" min="0" max="240"></label> miniutes</div>
+	 <label>ACTIVATE ACTIONS: <input type="checkbox" id="a_max_time_activate" ></label></div>
+	</form> 
+	<div align="center"><button id="reset">Reset</button> | <button id="save">Save</button>
+  </body>
+  <script src="options.js"></script>
+</html>
