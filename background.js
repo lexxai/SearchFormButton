@@ -10,6 +10,9 @@ let ADD_BUTTON_TEXT=true;
 //let tabid=0;
 
 
+  
+
+
 function installAlarms(refresh_time,button_id,add_button_text){
   chrome.alarms.clearAll();	 
   BUTTON_ID = button_id;
@@ -74,6 +77,9 @@ function searchButtonStart() {
   //let resttime;
   
   // FUNC
+  
+
+  
   
    function restore_options() {
 	  // Use default value color = 'red' and likesColor = true.
@@ -220,14 +226,14 @@ function searchButtonStart() {
   };	
 	
 
-  function MAIN_searchButtonStart(){
+
+  function MAIN_searchButtonStart(item){
 	  let TargetBTN = document.getElementById(BUTTON_ID);
 	  if (!TargetBTN) {
 		   TargetBTN = document.getElementsByName(BUTTON_ID)[0];
 	  }
 	  if (!TargetBTN) {
 		   TargetBTN = document.getElementsByClassName(BUTTON_ID)[0];
-		   console.log("TargetBTN"+TargetBTN.innerHTML);
 	  }
 	  if (!TargetBTN ) {
 		  return;
@@ -264,6 +270,28 @@ function searchButtonStart() {
   
 };	
 
+  function state_off(tabId=0){
+	tabId=parseInt(tabId);
+	console.log("state_off id:"+tabId);
+	chrome.action.setBadgeText(
+		{
+			text: '',
+			tabId: tabId,
+		},
+		() => { console.log("state_off setBadgeText done") }
+	);
+  };
+
+  function state_on(tabId){
+	tabId=parseInt(tabId);
+ 	chrome.action.setBadgeText(
+	  {
+		text: 'ON',
+		tabId: tabId,
+	  },
+	  () => { console.log("state_on setBadgeText done") }
+	);
+  };
 
 async function byTimer(id) {	
   let d = new Date();
@@ -315,8 +343,9 @@ async function removeTab(value){
 	  arr=arr.filter(item => item !== value);
 	  console.log("BG removedTab arr:"+arr);
 	  await new Promise((resolve_save) => {
-		  chrome.storage.sync.set({stabids: arr}, () => { console.log("BG removedTab confirm"); resolve_save() });
+		  chrome.storage.sync.set({stabids: arr}, () => { console.log("BG removedTab confirm"); resolve_save();	 });
 	  }); // promise wait save
+
 	 });
 }
 
@@ -353,6 +382,7 @@ async function checkTab(value){
 			removeTab(value);
 			console.log('checkTab - removeTab '+value);
 		}
+		
     }
   );
 };

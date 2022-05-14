@@ -60,6 +60,7 @@ function searchButtonStop() {
 
 function addTab(value){
  console.log('addTab '+value);
+ state_on(value);
  chrome.storage.sync.get({stabids:[]}, (result) => {
   let arr=result.stabids;
   console.log("arr:"+arr);
@@ -71,9 +72,33 @@ function addTab(value){
  });
 }
 
+  function state_off(tabId=0){
+	tabId=parseInt(tabId);
+	console.log("state_off id:"+tabId);
+	chrome.action.setBadgeText(
+		{
+			text: '',
+			tabId: tabId,
+		},
+		() => { console.log("state_off setBadgeText done") }
+	);
+  };
+
+  function state_on(tabId){
+	tabId=parseInt(tabId);
+ 	chrome.action.setBadgeText(
+	  {
+		text: 'ON',
+		tabId: tabId,
+	  },
+	  () => { console.log("state_on setBadgeText done") }
+	);
+  };
+
 function removeTab(value){
  if (!value) return;
  console.log('removeTab '+value);
+ state_off(value);
  chrome.storage.sync.get({ stabids: []}, (result) => {	
   let arr=result.stabids;
   console.log("arr:"+arr);
