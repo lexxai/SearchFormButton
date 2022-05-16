@@ -14,3 +14,5 @@ button.current {
 
 #startAction {background-color: green;}
 #stopAction {background-color: red;}
+
+div.hc {display: flex;justify-content: center;align-items: center;}

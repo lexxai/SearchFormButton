@@ -1,0 +1,32 @@
+{
+  "plug_name": {
+    "message": "Periodic software click of HTML button"
+  },
+  "plug_description": {
+    "message": "Periodic search of HTML button for its software click in the selected browser tabs according to certain rules and optional delay"
+  },
+  "plug_STARTBTN_TXT" :{
+	"message": "Start"
+  },
+  "plug_STOPBTN_TXT" :{
+	"message": "Stop"
+  },
+  "plug_PLUGACT_TXT" :{
+	"message": "ACTIVE"
+  },
+  "plug_PLUGNOTACT_TXT" :{
+	"message": "NO ACTIVE"
+  }, 
+  "plug_PLUGINI_TXT" :{
+	"message": "INITING"
+  },
+  "plug_PLUGINITED_TXT" :{
+	"message": "INITED"
+  },
+  "plug_REMIND_TXT" :{
+	"message": "Remind"
+  },
+  "plug_DELAY_TXT" :{
+	"message": "DELAYED"
+  }
+}

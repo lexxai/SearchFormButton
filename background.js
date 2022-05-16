@@ -52,11 +52,13 @@ async function getCurrentTab() {
 
 function searchButtonStart() {
 	
-  const REMIND_TXT='Remind';
+  const REMIND_TXT=chrome.i18n.getMessage("plug_REMIND_TXT");
   const NIGTH_TXT='&#127772;';
 
-  const PLUGACT_TXT=chrome.i18n.getMessage("plug_PLUGACT_TXT");  //'PLUGIN ACTIVE';
-  const PLUGINI_TXT=chrome.i18n.getMessage("plug_PLUGINI_TXT");  //'PLUGIN INITING';
+  const PLUGACT_TXT=chrome.i18n.getMessage("plug_PLUGACT_TXT");
+  const PLUGINI_TXT=chrome.i18n.getMessage("plug_PLUGINI_TXT");
+  const DELAY_TXT=chrome.i18n.getMessage("plug_DELAY_TXT");
+
   
   const BUTTON_SEARCH_BY_ID='id';
   const BUTTON_SEARCH_BY_NAME='name';
@@ -175,9 +177,9 @@ function searchButtonStart() {
 	d.setMilliseconds(ldelta);
     console.log('RetFULL_REMIND_TXT fireButton delay by :'+ d.toLocaleTimeString());
 	if (NIGTH_TIME) {
-		FULL_REMIND_TXT=NIGTH_TXT+" <i>"+REMIND_TXT+" :"+d.toLocaleTimeString()+"</i>";
+		FULL_REMIND_TXT=NIGTH_TXT+" <i>"+REMIND_TXT+": "+d.toLocaleTimeString()+"</i>";
 	}else{
-		FULL_REMIND_TXT=" "+REMIND_TXT+" :"+d.toLocaleTimeString();
+		FULL_REMIND_TXT=" "+REMIND_TXT+": "+d.toLocaleTimeString();
 	}
 	return FULL_REMIND_TXT;
   }
@@ -203,6 +205,7 @@ function searchButtonStart() {
 			resttime=document.createElement("span");
 			resttime.setAttribute("id",RESTTIME_ID);
 			resttime.innerHTML = RetFULL_REMIND_TXT(RND);
+			resttime.setAttribute("title",DELAY_TXT);
 			item.parentNode.insertBefore(resttime,item.nextSibling); 
 		}
 	}else{

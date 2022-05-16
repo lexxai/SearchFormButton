@@ -1,0 +1,32 @@
+{
+  "plug_name": {
+    "message": "Періодичне програмне натискання кнопки HTML"
+  },
+  "plug_description": {
+    "message": "Періодичний пошук у вибраних вкладках браузера певної HTML кнопки для її програмного натискання за певними правилами та необов'язковою затримкою"
+  },
+  "plug_STARTBTN_TXT": {
+    "message": "Почати"
+  },
+  "plug_STOPBTN_TXT": {
+    "message": "Зупинити"
+  },
+  "plug_PLUGACT_TXT": {
+    "message": "АКТИВНИЙ"
+  },
+  "plug_PLUGNOTACT_TXT": {
+    "message": "НЕ АКТИВНИЙ"
+  },
+  "plug_PLUGINI_TXT": {
+    "message": "Ініціалізація"
+  },
+  "plug_PLUGINITED_TXT": {
+    "message": "Ініціалізовано"
+  },
+  "plug_REMIND_TXT": {
+    "message": "ЗАЛИШИЛОСЬ"
+  },
+  "plug_DELAY_TXT": {
+    "message": "ЗАТРИМКА"
+  }
+}

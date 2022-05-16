@@ -1,8 +1,10 @@
 // Initialize button with user's preferred color
 const startAction = document.getElementById("startAction");
 const stopAction = document.getElementById("stopAction");
+startAction.innerHTML=chrome.i18n.getMessage("plug_STARTBTN_TXT");
+stopAction.innerHTML=chrome.i18n.getMessage("plug_STOPBTN_TXT");
 
-const PLUGINITED_TXT=chrome.i18n.getMessage("plug_PLUGINITED_TXT"); 
+
 let tabid=0;
 
 
@@ -126,6 +128,7 @@ function checkTab(value){
 //if (startAction) {
 // When the button is clicked, inject startAction into current page
 	startAction.addEventListener("click", async () => {
+	  const PLUGINITED_TXT=chrome.i18n.getMessage("plug_PLUGINITED_TXT"); 
 	  let [tab]=await chrome.tabs.query({ active: true, currentWindow: true });
 	  tabid=tab.id;
 	  stabid=tab.id;

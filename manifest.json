@@ -1,7 +1,7 @@
 {
   "name": "__MSG_plug_name__",
   "description": "__MSG_plug_description__",
-  "version": "2.3",
+  "version": "2.31",
   "author": "lexxai",
   "manifest_version": 3,
   "permissions": ["storage", "activeTab", "scripting", "alarms","tabs"],
@@ -24,17 +24,23 @@
 	"default_title": "__MSG_plug_name__",
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "/images/get_started16.png",
-      "32": "/images/get_started32.png",
-      "48": "/images/get_started48.png",
-      "128": "/images/get_started128.png"
+      "16": "/images/button-ico-16.png",
+      "32": "/images/button-ico-32.png",
+      "48": "/images/button-ico-48.png",
+      "64": "/images/button-ico-64.png",
+      "128": "/images/button-ico-128.png",
+      "256": "/images/button-ico-256.png",
+      "512": "/images/button-ico-512.png"
     }
   },
   "default_locale": "en",
   "icons": {
-    "16": "/images/get_started16.png",
-    "32": "/images/get_started32.png",
-    "48": "/images/get_started48.png",
-    "128": "/images/get_started128.png"
+      "16": "/images/button-ico-16.png",
+      "32": "/images/button-ico-32.png",
+      "48": "/images/button-ico-48.png",
+      "64": "/images/button-ico-64.png",
+      "128": "/images/button-ico-128.png",
+      "256": "/images/button-ico-256.png",
+      "512": "/images/button-ico-512.png"
   }
 }
