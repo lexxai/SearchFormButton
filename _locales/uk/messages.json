@@ -18,15 +18,75 @@
     "message": "НЕ АКТИВНИЙ"
   },
   "plug_PLUGINI_TXT": {
-    "message": "Ініціалізація"
+    "message": "ІНІЦІАЛІЗАЦІЯ"
   },
   "plug_PLUGINITED_TXT": {
-    "message": "Ініціалізовано"
+    "message": "ІНІЦІАЛІЗОВАНО"
   },
   "plug_REMIND_TXT": {
-    "message": "ЗАЛИШИЛОСЬ"
+    "message": "Залишилось часу"
   },
   "plug_DELAY_TXT": {
     "message": "ЗАТРИМКА"
+  },
+  "plug_MINUTES": {
+    "message": "хвилин"
+  },
+  "plug_SECONDS": {
+    "message": "секунд"
+  },
+  "MINTIME": {
+    "message": "МІН. ЧАС"
+  },
+  "MAXTIME": {
+    "message": "МАКС. ЧАС"
+  },
+  "REFRESHTIME": {
+    "message": "ЧАС ОПИТУВАННЯ"
+  },
+  "BUTTONID": {
+    "message": "ІДЕНТ. КНОПКИ"
+  },
+  "ADDTEXTAFTERBUTTON": {
+    "message": "ДОДАТИ ТЕКСТ ПІСЛЯ КНОПКИ"
+  },
+  "BUTTONTRIGGER": {
+    "message": "ТРИГГЕР ДЛЯ КНОПКИ"
+  },
+  "BUTTONSEARCHBY": {
+    "message": "ПОШУК КНОПКИ ЗА"
+  },
+  "ACTIONS": {
+    "message": "ДІЯ"
+  },
+  "STARTTIME": {
+    "message": "ЧАС ПОЧАТКУ"
+  },
+  "ENDTIME": {
+    "message": "ЧАС ЗАВЕРШЕННЯ"
+  },
+  "MAXTIMEBYACTIONS": {
+    "message": "МАКС. ЧАС ЗА ДІЄЮ"
+  },
+  "ACTIVATEACTIONS": {
+    "message": "АКТИВУВАТИ ДІЮ"
+  },
+  "RESET": {
+    "message": "Скинути"
+  },
+  "SAVE": {
+    "message": "Зберегти"
+  },
+  "OPENINGEXAMPLETARGETPAGE": {
+    "message": "Відкрити сторінку з прикладом: кнопка HTML"
+  },
+  "plug_FIRE_TXT": {
+    "message": "НАТИСКАННЯ"
+  },
+  "plug_SAVED_TXT": {
+    "message": "Налаштування збережено"
+  },
+  "plug_RESTORED_DEFAULT_TXT": {
+    "message": "Налаштування скинуті до значень за умовчанням"
   }
 }

@@ -1,3 +1,6 @@
+const SAVED_TXT=chrome.i18n.getMessage("plug_SAVED_TXT");
+const RESTORED_DEFAULT_TXT=chrome.i18n.getMessage("plug_RESTORED_DEFAULT_TXT");
+
 // Saves options to chrome.storage
 function save_options() {
   let  max_time = document.getElementById('max_time').value;
@@ -27,7 +30,7 @@ function save_options() {
   }, function() {
     // Update status to let user know options were saved.
     let status = document.getElementById('status');
-    status.innerHTML = '<div align="right" style="color: red; font-weight: bold;">Options saved.</div>';
+    status.innerHTML = '<div align="right" style="color: red; font-weight: bold;">'+SAVED_TXT+'.</div>';
     setTimeout(function() {
       status.innerHTML = '';
     }, 750);
@@ -40,7 +43,7 @@ function reset_options() {
 	 frm.reset();
 	// Update status to let user know options were reset.
     let status = document.getElementById('status');
-    status.innerHTML = '<div align="right" style="color: red; font-weight: bold;">The settings are reset to the default values.</div>';
+    status.innerHTML = '<div align="right" style="color: red; font-weight: bold;">'+RESTORED_DEFAULT_TXT+'.</div>';
     setTimeout(function() {
       status.innerHTML = '';
     }, 750);
@@ -77,6 +80,30 @@ function restore_options() {
 	 document.getElementById('btnsearch').value=items.btnsearch;
   });
 }
+
+var messageRegex = /__MSG_(.*)__/g;
+function localizeHtmlPage (elm) {
+  for (var i = 0; i < elm.children.length; i++) {
+    localizeHtmlPage(elm.children[i]);
+    if (elm.children[i].hasAttributes()) {
+      for (var j = 0; j < elm.children[i].attributes.length; j++) {
+        elm.children[i].attributes[j].name = elm.children[i].attributes[j].name.replace(messageRegex, localizeString);
+        elm.children[i].attributes[j].value = elm.children[i].attributes[j].value.replace(messageRegex, localizeString);
+      }
+    }
+    if (elm.children[i].innerHTML.length) {
+      elm.children[i].innerHTML = elm.children[i].innerHTML.replace(messageRegex, localizeString);
+    }
+  }
+}
+
+function localizeString(_, str) {
+    return str ? chrome.i18n.getMessage(str) : "";
+}
+
+localizeHtmlPage(document.body);
+
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click',  save_options);
 document.getElementById('reset').addEventListener('click',  reset_options);
+

@@ -1,11 +1,15 @@
 // Initialize button with user's preferred color
 const startAction = document.getElementById("startAction");
 const stopAction = document.getElementById("stopAction");
+const bImg = document.getElementById("bImg");
 startAction.innerHTML=chrome.i18n.getMessage("plug_STARTBTN_TXT");
 stopAction.innerHTML=chrome.i18n.getMessage("plug_STOPBTN_TXT");
+if (bImg) bImg.src='chrome-extension://'+chrome.i18n.getMessage("@@extension_id")+'/images/button-ico-128.png';
+
 
 
 let tabid=0;
+
 
 
 
@@ -128,7 +132,6 @@ function checkTab(value){
 //if (startAction) {
 // When the button is clicked, inject startAction into current page
 	startAction.addEventListener("click", async () => {
-	  const PLUGINITED_TXT=chrome.i18n.getMessage("plug_PLUGINITED_TXT"); 
 	  let [tab]=await chrome.tabs.query({ active: true, currentWindow: true });
 	  tabid=tab.id;
 	  stabid=tab.id;
@@ -137,6 +140,7 @@ function checkTab(value){
 	  chrome.scripting.executeScript({
 	   target: { tabId: tabid },
 	   function: () => {
+		   const PLUGINITED_TXT=chrome.i18n.getMessage("plug_PLUGINITED_TXT"); 
 		   let OLDT="";
 		   let Title = document.getElementsByTagName("title")[0];
 		   if (Title) {
@@ -166,8 +170,6 @@ function checkTab(value){
 	  });
 	});
 //}
-
-
 
 
 

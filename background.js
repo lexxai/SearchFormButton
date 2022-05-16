@@ -58,6 +58,7 @@ function searchButtonStart() {
   const PLUGACT_TXT=chrome.i18n.getMessage("plug_PLUGACT_TXT");
   const PLUGINI_TXT=chrome.i18n.getMessage("plug_PLUGINI_TXT");
   const DELAY_TXT=chrome.i18n.getMessage("plug_DELAY_TXT");
+  const FIRE_TXT=chrome.i18n.getMessage("plug_FIRE_TXT");
 
   
   const BUTTON_SEARCH_BY_ID='id';
@@ -220,7 +221,7 @@ function searchButtonStart() {
 			item.setAttribute("clicked",clicked);
             setTitleActive(clicked);
 			if (ADD_BUTTON_TEXT && resttime) {
-			  resttime.innerHTML="*** FIRE ***";
+			  resttime.innerHTML="*** "+FIRE_TXT+" ***";
 			  setTimeout(()=>{resttime.remove()},1500);
 			}
 		}else{

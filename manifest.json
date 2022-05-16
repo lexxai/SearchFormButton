@@ -1,7 +1,7 @@
 {
   "name": "__MSG_plug_name__",
   "description": "__MSG_plug_description__",
-  "version": "2.31",
+  "version": "2.32",
   "author": "lexxai",
   "manifest_version": 3,
   "permissions": ["storage", "activeTab", "scripting", "alarms","tabs"],

@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="options.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div id="status"></div>
 	<form id="f1">
-     <div><label>MIN TIME: <input type="number" size="8" value="1" id="min_time" min="0" max="120"></label> minutes</div>
-     <div><label>MAX TIME: <input type="number" size="8" value="10" id="max_time" min="0" max="120"></label> minutes</div>
-	 <div><label>REFRESH TIME: <input type="number" size="8" value="15" id="refresh_time" min="2" max="60"></label> seconds</div>
+     <div><label>__MSG_MINTIME__: <input type="number" size="8" value="1" id="min_time" min="0" max="120"></label> __MSG_plug_MINUTES__</div>
+     <div><label>__MSG_MAXTIME__: <input type="number" size="8" value="10" id="max_time" min="0" max="120"></label> __MSG_plug_MINUTES__</div>
+	 <div><label>__MSG_REFRESHTIME__: <input type="number" size="8" value="15" id="refresh_time" min="2" max="60"></label> __MSG_plug_SECONDS__ [2-60]</div>
 	 <hr>
-	  <div><label>BUTTON ID: <input type="text" size="12" value="targetbtn" id="button_id"></label> 
-	  | <label>ADD TEXT AFTER BUTTON: <input type="checkbox" id="add_button_text" checked></label></div>
-	  <div><label>BUTTON TRIGGER: <input type="text" size="12" value="Start" id="button_trigg"></label></div>
-	  <div><label>BUTTON SEARCH BY: 
+	  <div><label>__MSG_BUTTONID__: <input type="text" size="12" value="targetbtn" id="button_id"></label></div> 
+	  <div><label>__MSG_ADDTEXTAFTERBUTTON__: <input type="checkbox" id="add_button_text" checked></label></div>
+	  <div><label>__MSG_BUTTONTRIGGER__: <input type="text" size="12" value="Start" id="button_trigg"></label></div>
+	  <div><label>__MSG_BUTTONSEARCHBY__: 
 		<select id="btnsearch" name="btnsearch">
 			<option value="id">id</option>
 			<option value="name">name</option>
@@ -21,16 +22,15 @@
 		</select>
 	  </div>
 	 <hr>
-	 <h3>ACTIONS</h3>
-	 <div>
-	  <label>START TIME: <input type="time" size="8" value="03:00" id="s_max_time" min="00:00" max="23:59"></label> </div>
-	 <div> <label>END TIME: <input type="time" size="8" value="09:00" id="e_max_time" min="00:00" max="23:59"></label>
-	 </div>
-	 <div><label>MAX TIME BY ACTIONS: <input type="number" size="8" value="30" id="a_max_time" min="0" max="240"></label> miniutes</div>
-	 <label>ACTIVATE ACTIONS: <input type="checkbox" id="a_max_time_activate" ></label></div>
+	 <h3>__MSG_ACTIONS__</h3>
+	 <div><label>__MSG_STARTTIME__: <input type="time" size="8" value="03:00" id="s_max_time" min="00:00" max="23:59"></label> </div>
+	 <div> <label>__MSG_ENDTIME__: <input type="time" size="8" value="09:00" id="e_max_time" min="00:00" max="23:59"></label></div>
+	 <div><label>__MSG_MAXTIMEBYACTIONS__: <input type="number" size="8" value="30" id="a_max_time" min="0" max="240"></label> __MSG_plug_MINUTES__</div>
+	 <label>__MSG_ACTIVATEACTIONS__: <input type="checkbox" id="a_max_time_activate" ></label>
 	</form> 
-	<div align="center"><button id="reset">Reset</button> | <button id="save">Save</button>
-	<code><a href="/example/HTML-TEST/test-btn.html" target="_new">Opening example target page</a></code>
+	<div class="hc"><button id="reset">__MSG_RESET__</button> | <button id="save">__MSG_SAVE__</button></div>
+	<div class="hc"><code><a href="chrome-extension://__MSG_@@extension_id__/example/HTML-TEST/test-btn.html" target="_new">__MSG_OPENINGEXAMPLETARGETPAGE__</a></code></div>
+  </div>
   </body>
   <script src="options.js"></script>
 </html>

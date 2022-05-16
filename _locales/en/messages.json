@@ -24,9 +24,69 @@
 	"message": "INITED"
   },
   "plug_REMIND_TXT" :{
-	"message": "Remind"
+	"message": "Time left"
   },
   "plug_DELAY_TXT" :{
 	"message": "DELAYED"
+  },
+  "plug_MINUTES" :{
+	"message": "minutes"
+  },
+  "plug_SECONDS" :{
+	"message": "seconds"
+  },
+  "MINTIME" :{
+	"message": "MIN TIME"
+  },
+  "MAXTIME" :{
+	"message": "MAX TIME"
+  },
+  "REFRESHTIME" :{
+	"message": "REFRESH TIME"
+  },
+  "BUTTONID" :{
+	"message": "BUTTON ID"
+  },
+  "ADDTEXTAFTERBUTTON" :{
+	"message": "ADD TEXT AFTER BUTTON"
+  },
+  "BUTTONTRIGGER" :{
+	"message": "BUTTON TRIGGER"
+  },
+  "BUTTONSEARCHBY" :{
+	"message": "BUTTON SEARCH BY"
+  },
+  "ACTIONS" :{
+	"message": "ACTIONS"
+  },
+  "STARTTIME" :{
+	"message": "START TIME"
+  },
+  "ENDTIME" :{
+	"message": "END TIME"
+  },
+  "MAXTIMEBYACTIONS" :{
+	"message": "MAX TIME BY ACTIONS"
+  },
+  "ACTIVATEACTIONS" :{
+	"message": "ACTIVATE ACTIONS"
+  },
+  "RESET" :{
+	"message": "Reset"
+  },
+  "SAVE" :{
+	"message": "Save"
+  },
+  "OPENINGEXAMPLETARGETPAGE" :{
+	"message": "Open page with example: HTML button"
+  },
+  "plug_FIRE_TXT" :{
+	"message": "FIRE"
+  },
+  "plug_SAVED_TXT" :{
+	"message": "Options saved"
+  },
+  "plug_RESTORED_DEFAULT_TXT" :{
+	"message": "The settings are reset to the default values"
   }
 }
