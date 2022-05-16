@@ -1,6 +1,8 @@
 // Initialize button with user's preferred color
 const startAction = document.getElementById("startAction");
 const stopAction = document.getElementById("stopAction");
+
+const PLUGINITED_TXT=chrome.i18n.getMessage("plug_PLUGINITED_TXT"); 
 let tabid=0;
 
 
@@ -19,6 +21,8 @@ async function getCurrentTabID() {
 }
 
 function searchButtonStop() {
+	 const PLUGNOTACT_TXT=chrome.i18n.getMessage("plug_PLUGNOTACT_TXT");
+
 	 const RESTTIME_ID='_resttime_';
 	 stabid=0;	
 	 console.log('action stopPageBackgroundColo');
@@ -53,7 +57,7 @@ function searchButtonStop() {
 					Title.setAttribute("ot",OLDT);
 				}
 			   }
-			   document.title="PLUGIN NOT ACTIVE|"+OLDT
+			   document.title=PLUGNOTACT_TXT+"|"+OLDT
 		 });
 	 });
 };
@@ -72,7 +76,7 @@ function addTab(value){
  });
 }
 
-  function state_off(tabId=0){
+function state_off(tabId=0){
 	tabId=parseInt(tabId);
 	console.log("state_off id:"+tabId);
 	chrome.action.setBadgeText(
@@ -82,9 +86,9 @@ function addTab(value){
 		},
 		() => { console.log("state_off setBadgeText done") }
 	);
-  };
+};
 
-  function state_on(tabId){
+function state_on(tabId){
 	tabId=parseInt(tabId);
  	chrome.action.setBadgeText(
 	  {
@@ -93,7 +97,7 @@ function addTab(value){
 	  },
 	  () => { console.log("state_on setBadgeText done") }
 	);
-  };
+};
 
 function removeTab(value){
  if (!value) return;
@@ -139,7 +143,7 @@ function checkTab(value){
 				Title.setAttribute("ot",OLDT);
 			}
 		   }
-		   document.title="PLUGIN INITED|"+OLDT
+		   document.title=PLUGINITED_TXT+"|"+OLDT
 		 },
 	  //byTimer();
 	  });
@@ -156,12 +160,7 @@ function checkTab(value){
 	  chrome.scripting.executeScript({
 		target: { tabId: tabid ,  allFrames: true},
 		func: searchButtonStop,
-	  },
-	   (injectionResults) => {
-		for (const frameResult of injectionResults) {
-		console.log('stopAction result injection: ' + frameResult.result);
-		};
-	   });
+	  });
 	});
 //}
 

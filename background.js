@@ -55,8 +55,12 @@ function searchButtonStart() {
   const REMIND_TXT='Remind';
   const NIGTH_TXT='&#127772;';
 
-  const PLUGACT_TXT='PLUGIN ACTIVE';
-  const PLUGINI_TXT='PLUGIN INITING';
+  const PLUGACT_TXT=chrome.i18n.getMessage("plug_PLUGACT_TXT");  //'PLUGIN ACTIVE';
+  const PLUGINI_TXT=chrome.i18n.getMessage("plug_PLUGINI_TXT");  //'PLUGIN INITING';
+  
+  const BUTTON_SEARCH_BY_ID='id';
+  const BUTTON_SEARCH_BY_NAME='name';
+  const BUTTON_SEARCH_BY_CLASS='class';
 
   const STEP_FIREDELAY=15;  //seconds
   let MAX_TIME=30;//minutes
@@ -67,6 +71,7 @@ function searchButtonStart() {
   
   let BUTTON_ID='targetbtn';
   let BUTTON_TRIGG='Start';
+  let BUTTON_SEARCH_BY='id';
   let ADD_BUTTON_TEXT=true;  
   const RESTTIME_ID='_resttime_';
   let START_MAX_TIME="03:00"
@@ -92,6 +97,7 @@ function searchButtonStart() {
 		a_max_time_activate: true,
 		button_id: 'targetbtn',
 		button_trigg: 'Start',
+		btnsearch: 'id',
 		add_button_text: true
 	  }, function(items) {
 		 MAX_TIME=parseInt(items.max_time);
@@ -100,6 +106,7 @@ function searchButtonStart() {
          MIN_FIREDELAY=MIN_TIME*60/STEP_FIREDELAY; 
 		 BUTTON_ID=items.button_id;
 		 BUTTON_TRIGG=items.button_trigg;
+		 BUTTON_SEARCH_BY=items.btnsearch;
 		 ADD_BUTTON_TEXT=(items.add_button_text != ""); 
 		 START_MAX_TIME=items.s_max_time;
 		 END_MAX_TIME=items.e_max_time;
@@ -228,13 +235,28 @@ function searchButtonStart() {
 
 
   function MAIN_searchButtonStart(item){
-	  let TargetBTN = document.getElementById(BUTTON_ID);
+	  let TargetBTN;
+	  console.log("MAIN_searchButtonStart BUTTON_SEARCH_BY: "+BUTTON_SEARCH_BY);
+	  switch (BUTTON_SEARCH_BY) {
+		   case BUTTON_SEARCH_BY_ID:
+				TargetBTN = document.getElementById(BUTTON_ID);
+		   break;
+		   case BUTTON_SEARCH_BY_NAME:
+				TargetBTN = document.getElementsByName(BUTTON_ID)[0];
+		   break;
+		   case BUTTON_SEARCH_BY_CLASS:
+				TargetBTN = document.getElementsByClassName(BUTTON_ID)[0];
+		   break;		   
+		   default: 
+				return;
+	  }
+/* 	  let TargetBTN = document.getElementById(BUTTON_ID);
 	  if (!TargetBTN) {
 		   TargetBTN = document.getElementsByName(BUTTON_ID)[0];
 	  }
 	  if (!TargetBTN) {
 		   TargetBTN = document.getElementsByClassName(BUTTON_ID)[0];
-	  }
+	  } */
 	  if (!TargetBTN ) {
 		  return;
 	  }

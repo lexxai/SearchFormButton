@@ -1,10 +1,18 @@
 {
-  "name": "Periodic software click of HTML button",
-  "description": "Periodic search of HTML button for its software click in the selected browser tabs according to certain rules and optional delay",
-  "version": "2.2",
+  "name": "__MSG_plug_name__",
+  "description": "__MSG_plug_description__",
+  "version": "2.3",
   "author": "lexxai",
   "manifest_version": 3,
   "permissions": ["storage", "activeTab", "scripting", "alarms","tabs"],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [
+    {
+      "resources": ["*"],
+	  "extension_ids": [ "mlijnhfhhibiecekjbeeakhagbkhplka" ],
+	  "use_dynamic_url": true
+    }
+  ],
   "background": {
     "service_worker": "background.js"
   },
@@ -13,6 +21,7 @@
     "open_in_tab": false
   },
   "action": {
+	"default_title": "__MSG_plug_name__",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "/images/get_started16.png",
@@ -21,6 +30,7 @@
       "128": "/images/get_started128.png"
     }
   },
+  "default_locale": "en",
   "icons": {
     "16": "/images/get_started16.png",
     "32": "/images/get_started32.png",
