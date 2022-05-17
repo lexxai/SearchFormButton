@@ -54,7 +54,9 @@ The application is made more or less flexible, so that anyone can customize it t
 
 Додаток ініцйовнно для додавання в публічний доступ в Chrome Google Web Store
 
-https://chrome.google.com/webstore/detail/line/mlijnhfhhibiecekjbeeakhagbkhplka?hl=uk
+[https://chrome.google.com/webstore/detail/line/mlijnhfhhibiecekjbeeakhagbkhplka?hl=uk
+](https://chrome.google.com/webstore/detail/line/mlijnhfhhibiecekjbeeakhagbkhplka?hl=uk
+)
 
-Локалізацю створенно за допомогою: https://crowdin.com/translate/searchformbutton
+Локалізацю створенно за допомогою: [https://crowdin.com/project/searchformbutton](https://crowdin.com/project/searchformbutton)
 
