@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>TEST BUTTON</title>
@@ -7,13 +8,27 @@
   <body>
     <p><br>
 	<form id="f1">  	</form>
-	 <button id="targetbtn" onclick="cli()" value="Start">Start</button>
+	 <button class="round" id="targetbtn" value="Start">Start</button>
+	 <button id="chbtn">Change TEXT of Button</button>
     </p>  
-	
-   <script>
-   function cli(){
-    console.log('***********  Button fired ************');
-   }
-  </script>   
+	<textarea disabled style="width: 100%;height: 255px;" >
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>TEST BUTTON</title>
+  </head>
+  <body>
+	<form id="f1"></form>
+	<button id="targetbtn"  value="Start">Start</button>
+	<script>
+	 function cli(){
+	  console.log('***********  Button fired ************');
+	 }
+	</script> 
+  </body>
+</html>	
+	</textarea>
+	<div id="status"></div>
+    <script src="test-btn.js"></script>
   </body>
 </html>
