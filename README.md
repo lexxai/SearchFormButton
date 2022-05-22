@@ -11,7 +11,7 @@ The application is made more or less flexible, so that anyone can customize it t
 Тому цей додаток робить періодичний пошук у вибраних вкладках браузера певної HTML кнопки для її програмного натискання за певними правилами та необов'язковою затримкою перед натисканням.
 Додаток створено більш менш гнучким, щоб можна було будь кому налаштувати його під свої умови використання. 
 
-Приклад коду де додаток може бути використанний.
+Приклад коду де додаток може бути використаний.
 ```
 <html>
   <head>
@@ -51,6 +51,8 @@ The application is made more or less flexible, so that anyone can customize it t
 ![Screenshot 2022-05-17 023154-B03-1280](https://user-images.githubusercontent.com/3278842/168913969-fa7f289b-7058-4f83-9201-7b14d64076a6.png)
 ![Screenshot 2022-05-17 023154-B04-1280](https://user-images.githubusercontent.com/3278842/168913971-ec558c79-2909-4d22-9f23-44a0a15cd15f.png)
 ![Screenshot 2022-05-17 023154-B01-1280](https://user-images.githubusercontent.com/3278842/168913964-e1a2d0af-d13e-413a-9c27-028c26ce7d31.png)
+![Screenshot 2022-05-17 023154-B06](https://user-images.githubusercontent.com/3278842/169706057-e67cca65-f89b-41ba-b749-a5e983a5eaaf.png)
+
 
 Додаток ініцйовнно для додавання в публічний доступ в Chrome Google Web Store
 
@@ -58,5 +60,5 @@ The application is made more or less flexible, so that anyone can customize it t
 ](https://chrome.google.com/webstore/detail/line/mlijnhfhhibiecekjbeeakhagbkhplka?hl=uk
 )
 
-Локалізацю створенно за допомогою: [https://crowdin.com/project/searchformbutton](https://crowdin.com/project/searchformbutton)
+Локалізацію створено за допомогою: [https://crowdin.com/project/searchformbutton](https://crowdin.com/project/searchformbutton)
 
