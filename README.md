@@ -54,7 +54,7 @@ The application is made more or less flexible, so that anyone can customize it t
 ![Screenshot 2022-05-17 023154-B06](https://user-images.githubusercontent.com/3278842/169706057-e67cca65-f89b-41ba-b749-a5e983a5eaaf.png)
 
 
-Додаток публічнному доступі Chrome Google Web Store (Періодичне програмне натискання кнопки HTML / Periodic software click of HTML button): [https://chrome.google.com/webstore/detail/periodic-software-click-o/njbkhcajiabiodgmbilfinpdalneilfg?hl=uk&authuser=0
+Додаток присутінй у публічнному доступі з Chrome Google Web Store (Періодичне програмне натискання кнопки HTML / Periodic software click of HTML button): [https://chrome.google.com/webstore/detail/periodic-software-click-o/njbkhcajiabiodgmbilfinpdalneilfg?hl=uk&authuser=0
 ](https://chrome.google.com/webstore/detail/periodic-software-click-o/njbkhcajiabiodgmbilfinpdalneilfg?hl=uk&authuser=0)
 
 Локалізацію створено за допомогою: [https://crowdin.com/project/searchformbutton](https://crowdin.com/project/searchformbutton)
